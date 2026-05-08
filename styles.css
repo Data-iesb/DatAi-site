@@ -368,15 +368,16 @@ nav {
 }
 
 .contact-form {
-	background: rgba(14, 20, 37, 0.8);
-	border: 1px solid rgba(60, 215, 255, 0.15);
-	border-radius: 16px;
-	padding: 1.5rem;
-	backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.95);
+	border: 1px solid rgba(60, 215, 255, 0.2);
+	border-radius: 20px;
+	padding: 2rem;
+	backdrop-filter: blur(12px);
+	box-shadow: 0 8px 32px rgba(60, 215, 255, 0.08);
 }
 
 .contact-form iframe {
-	border-radius: 12px;
+	border-radius: 14px;
 	border: none;
 }
 
