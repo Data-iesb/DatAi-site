@@ -171,6 +171,7 @@ nav ul li a:hover {
 	max-width: 75px;
 	height: auto;
 	margin-bottom: 1em;
+	filter: brightness(0) invert(1);
 }
 
 .service-card button {
