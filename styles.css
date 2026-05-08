@@ -93,11 +93,20 @@ nav {
 .hero-title {
 	font-size: 4rem;
 	font-weight: 800;
-	background: linear-gradient(135deg, #fff, var(--cyan));
+	background: linear-gradient(135deg, #fff, var(--cyan), var(--blue-light), #fff);
+	background-size: 400% 400%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	margin-bottom: 0.5rem;
+	animation: titleShimmer 3s ease-in-out infinite;
+	text-shadow: 0 0 40px rgba(60, 215, 255, 0.3);
+}
+
+@keyframes titleShimmer {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
 }
 
 .hero-subtitle {
