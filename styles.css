@@ -171,6 +171,21 @@ nav {
 	padding: 6rem 2rem;
 	background: #fff;
 	color: var(--blue);
+	position: relative;
+	overflow: hidden;
+}
+
+.about canvas {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.about-container,
+.team-title,
+.team-grid {
+	position: relative;
+	z-index: 1;
 }
 
 .about-container {

@@ -63,6 +63,7 @@
 </section>
 
 <section id="quem-somos" class="about">
+	<canvas id="neural3"></canvas>
 	<div class="about-container">
 		<div class="about-text">
 			<h2>Quem Somos</h2>
@@ -130,10 +131,12 @@
 <script src="script.js"></script>
 <script>
 // Neural network background
-function initNeural(canvasId, nodeCount) {
+function initNeural(canvasId, nodeCount, light) {
 	const c = document.getElementById(canvasId);
 	const ctx = c.getContext('2d');
 	let W, H, nodes = [], rotY = 0;
+	const lineColor = light ? '2,40,89' : '77,142,255';
+	const nodeColor = light ? '2,40,89' : '60,215,255';
 
 	function resize() {
 		W = c.width = c.parentElement.offsetWidth;
@@ -174,7 +177,7 @@ function initNeural(canvasId, nodeCount) {
 				const a = proj[i], b = proj[j];
 				const d = Math.hypot(a.x - b.x, a.y - b.y);
 				if (d < 200 * a.scale) {
-					ctx.strokeStyle = `rgba(77,142,255,${(1 - d / (200 * a.scale)) * 0.12 * a.scale})`;
+					ctx.strokeStyle = `rgba(${lineColor},${(1 - d / (200 * a.scale)) * 0.12 * a.scale})`;
 					ctx.lineWidth = 0.5;
 					ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
 				}
@@ -185,7 +188,7 @@ function initNeural(canvasId, nodeCount) {
 			const glow = (Math.sin(p.pulse) + 1) / 2;
 			const alpha = (0.3 + glow * 0.5) * p.scale;
 			ctx.beginPath(); ctx.arc(p.x, p.y, 1.8 * p.scale, 0, Math.PI * 2);
-			ctx.fillStyle = `rgba(60,215,255,${alpha})`; ctx.fill();
+			ctx.fillStyle = `rgba(${nodeColor},${alpha})`; ctx.fill();
 		}
 		requestAnimationFrame(draw);
 	}
@@ -194,6 +197,7 @@ function initNeural(canvasId, nodeCount) {
 
 initNeural('neural', 100);
 initNeural('neural2', 60);
+initNeural('neural3', 80, true);
 </script>
 </body>
 </html>
