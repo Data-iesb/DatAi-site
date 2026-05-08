@@ -404,35 +404,12 @@ footer {
 
 footer p { margin-bottom: 0.3rem; }
 
-.footer-channels {
-	display: flex;
-	gap: 1rem;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-bottom: 1.2rem;
-}
-
-.footer-btn {
-	padding: 0.6rem 1.2rem;
-	background: rgba(60, 215, 255, 0.1);
-	border: 1px solid rgba(60, 215, 255, 0.25);
-	border-radius: 4px;
-	color: #fff;
-	text-decoration: none;
-	font-size: 0.8rem;
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	transition: background 0.2s;
-}
-
-.footer-btn:hover { background: rgba(60, 215, 255, 0.2); }
-
 .footer-links {
 	display: flex;
 	justify-content: center;
 	gap: 1.5rem;
 	margin-bottom: 1rem;
+	flex-wrap: wrap;
 }
 
 .footer-links a {
