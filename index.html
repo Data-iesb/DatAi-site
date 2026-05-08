@@ -1,324 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>DatAí</title>
-		<link rel="stylesheet" href="styles.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Open+Sans:ital@1&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>DatAí</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-	<body>
-		<input
-			id="close-menu"
-			class="close-menu"
-			type="checkbox"
-			aria-label="Close menu"
-			role="button"
-		/>
-		<label class="close-menu-label" for="close-menu" title="close menu"></label>
-		<aside class="menu">
-			<section class="main-content menu-content">
-				<h1 onclick="getElementById('close-menu').checked = false;">
-					<a href="#inicio">DatAí</a>
-				</h1>
-				<nav>
-					<ul onclick="getElementById('close-menu').checked = false;">
-						<li><a href="#inicio">Início</a></li>
-						<li><a href="#quem-somos">Quem Somos</a></li>
-						<li><a href="#contato">Contato</a></li>
-					</ul>
-				</nav>
-			</section>
-		</aside>
+<nav id="navbar">
+	<div class="nav-container">
+		<a href="#inicio" class="logo">DatAí</a>
+		<ul class="nav-links">
+			<li><a href="#inicio">Início</a></li>
+			<li><a href="#servicos">Serviços</a></li>
+			<li><a href="#quem-somos">Quem Somos</a></li>
+			<li><a href="#contato">Contato</a></li>
+		</ul>
+	</div>
+</nav>
 
-		<section id="inicio" class="main-one-bg section">
-			<canvas class="neural-bg" id="neural"></canvas>
-			<div class="main-content inicio-content">
-				<h1>DatAí,<br />sua solução em dados.</h1>
-				<section id="servicos" class="servicos-content">
-					<h6>Conheça nossos serviços:</h6>
-					<div class="services-container">
-						<div class="service-card">
-							<img src="icons/exploration.png" alt="Exploração de dados" />
-							<h3>Exploração de dados</h3>
-							<button onclick="toggleServiceDetails(this)">Saber mais</button>
-							<div class="additional-text">
-								<p><strong>Não perca tempo com dados dispersos e relatórios confusos. Invista em clareza e precisão com nosso serviço de dashboard personalizado. Transforme seus dados em decisões estratégicas e leve seu negócio para o próximo nível!</strong></p>
-								<br />
-								<p><strong>Descubra o Potencial dos Seus Dados com Nosso Serviço de Exploração de Dados</strong></p>
-								<p>Em um mundo onde as informações são o novo ouro, ter acesso aos dados não é suficiente. É preciso entender, interpretar e explorar esses dados para extrair insights valiosos que impulsionam o crescimento e a inovação. Apresentamos nosso <strong>serviço de exploração de dados:</strong> a chave para transformar dados brutos em estratégias vencedoras.</p>
-							</div>
-						</div>
-						<div class="service-card">
-							<img src="icons/automation.png" alt="Automação de dados" />
-							<h3>Automação</h3>
-							<button onclick="toggleServiceDetails(this)">Saber mais</button>
-							<div class="additional-text">
-								<p><strong>Simplifique Processos e Aumente a Produtividade com Nosso Serviço de Automação</strong></p>
-								<p>Em um mercado cada vez mais competitivo, a eficiência operacional é fundamental para o sucesso. Nosso <strong>serviço de automação</strong> oferece a solução ideal para empresas que buscam otimizar processos, reduzir erros e liberar tempo para focar no que realmente importa: crescer e inovar.</p>
-								<br />
-								<h3>Por que é Importante?</h3>
-								<ul>
-									<li><strong>Aumento da Eficiência:</strong> Tarefas realizadas de maneira mais rápida e precisa.</li>
-									<li><strong>Redução de Erros:</strong> Menos falhas humanas, maior consistência.</li>
-									<li><strong>Economia de Tempo e Custos:</strong> Redução de trabalho manual.</li>
-									<li><strong>Escalabilidade:</strong> Crescimento sustentável.</li>
-									<li><strong>Foco no Estratégico:</strong> Equipe focada em atividades de maior valor.</li>
-								</ul>
-							</div>
-						</div>
-						<div class="service-card">
-							<img src="icons/brain.png" alt="Machine Learning" />
-							<h3>Machine Learning</h3>
-							<button onclick="toggleServiceDetails(this)">Saber mais</button>
-							<div class="additional-text">
-								<p><strong>Desvende o Poder da Inteligência Artificial com Nosso Serviço de Machine Learning</strong></p>
-								<p>No cenário tecnológico atual, o aprendizado de máquina está revolucionando a forma como as empresas operam e tomam decisões. Com nosso <strong>serviço de machine learning,</strong> você pode transformar seus dados em previsões precisas.</p>
-								<br />
-								<h3>Por que é Importante?</h3>
-								<ul>
-									<li><strong>Previsões Precisas:</strong> Preveja tendências de mercado e comportamento do cliente.</li>
-									<li><strong>Otimização de Processos:</strong> Automatize decisões complexas.</li>
-									<li><strong>Personalização em Escala:</strong> Experiências personalizadas para clientes.</li>
-									<li><strong>Detecção de Anomalias:</strong> Identifique fraudes e problemas antecipadamente.</li>
-									<li><strong>Inovação Contínua:</strong> Descubra novas oportunidades através de dados.</li>
-								</ul>
-							</div>
-						</div>
-						<div class="service-card">
-							<img src="icons/data-science.png" alt="Treinamento de dados" />
-							<h3>Treinamento de dados</h3>
-							<button onclick="toggleServiceDetails(this)">Saber mais</button>
-							<div class="additional-text">
-								<p><strong>Potencialize Sua Empresa com Nosso Serviço de Treinamento de Dados e Conformidade com a LGPD</strong></p>
-								<p>Na era digital, empresas que adotam uma cultura Data Driven têm uma vantagem competitiva significativa. Oferecemos nosso <strong>serviço de treinamento de dados,</strong> focado em capacitar sua equipe para trabalhar de forma eficiente e em conformidade com a LGPD.</p>
-								<br />
-								<h3>Por que é Importante?</h3>
-								<ul>
-									<li><strong>Decisões Baseadas em Dados:</strong> Decisões estratégicas com base em dados sólidos.</li>
-									<li><strong>Conformidade com a LGPD:</strong> Evite multas e danos à reputação.</li>
-									<li><strong>Aprimoramento de Competências:</strong> Equipe preparada para o mercado digital.</li>
-									<li><strong>Melhoria da Eficiência Operacional:</strong> Otimize processos guiados por dados.</li>
-									<li><strong>Confiança e Segurança:</strong> Dados tratados com responsabilidade.</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+<section id="inicio" class="hero">
+	<canvas id="neural"></canvas>
+	<div class="hero-content">
+		<h1 class="hero-title">DatAí</h1>
+		<p class="hero-subtitle">Sua solução em dados.</p>
+	</div>
+</section>
+
+<section id="servicos" class="services">
+	<h2>Nossos Serviços</h2>
+	<div class="services-grid">
+		<div class="card" onclick="toggleCard(this)">
+			<img src="icons/exploration.png" alt="Exploração de dados" />
+			<h3>Exploração de dados</h3>
+			<p class="card-preview">Transforme dados brutos em decisões estratégicas.</p>
+			<div class="card-detail">
+				<p>Não perca tempo com dados dispersos e relatórios confusos. Invista em clareza e precisão com nosso serviço de dashboard personalizado. Transforme seus dados em decisões estratégicas e leve seu negócio para o próximo nível!</p>
 			</div>
-		</section>
-
-		<section id="quem-somos" class="main-two-bg section">
-			<div class="main-content quem-somos-content">
-				<div class="quem-somos-text-content">
-					<h1>Quem Somos?</h1>
-					<div class="quem-somos-card">
-						<p class="branco-bg">Nós somos a Dataí, uma empresa júnior de ciência de dados composta por alunos dos cursos de Ciência de Dados e Inteligência Artificial, Ciência da Computação, Engenharia da Computação, Engenharia de Software e Análise de Sistemas do IESB.</p>
-						<br />
-						<p class="branco-bg">Nosso objetivo é proporcionar soluções inovadoras e perspicazes a pessoas e empresas, utilizando dados de forma estratégica. Assim, ajudamos nossos clientes a atingirem seus objetivos.</p>
-					</div>
-				</div>
-				<div class="quem-somos-img">
-					<img src="logos/Logo-principal.jpg" alt="Logo dataí" />
-				</div>
+		</div>
+		<div class="card" onclick="toggleCard(this)">
+			<img src="icons/automation.png" alt="Automação" />
+			<h3>Automação</h3>
+			<p class="card-preview">Otimize processos e reduza erros com automação inteligente.</p>
+			<div class="card-detail">
+				<p>Simplifique processos e aumente a produtividade. Nosso serviço de automação oferece a solução ideal para empresas que buscam otimizar processos, reduzir erros e liberar tempo para focar no que realmente importa.</p>
 			</div>
-		</section>
-
-		<section class="equipe">
-			<h2>CONHEÇA NOSSA EQUIPE</h2>
-			<div class="carousel">
-				<div class="carousel-item">
-					<a href="https://www.linkedin.com/in/felipetoledoneves/" target="_blank">
-						<img src="imagens/felipe_fundo_azul_circle.png" alt="Felipe Toledo">
-					</a>
-					<h3>Felipe Toledo</h3>
-					<h3>Presidente</h3>
-					<p>7° semestre - Ciência de dados</p>
-				</div>
-				<div class="carousel-item">
-					<a href="https://www.linkedin.com/in/lara-alves-de-freitas/" target="_blank">
-						<img src="imagens/lara_azul_circle.png" alt="Lara Silva">
-					</a>
-					<h3>Lara Alves</h3>
-					<h3>Líder de Imagem e Publicidade</h3>
-					<p>4° semestre - Ciência da computação</p>
-				</div>
-				<div class="carousel-item">
-					<a href="https://www.linkedin.com/in/nicoledduarte" target="_blank">
-						<img src="imagens/nicole_azul_circle.png" alt="Nicole">
-					</a>
-					<h3>Nicole Duarte</h3>
-					<h3>Líder de Organização Empresarial</h3>
-					<p>3° semestre - Ciência de dados</p>
-				</div>
-				<div class="carousel-item">
-					<a href="https://www.linkedin.com/in/jorge-lima-6b4567279/" target="_blank">
-						<img src="imagens/jorge_fundo_azul.png" alt="Jorge">
-					</a>
-					<h3>Jorge Patricio</h3>
-					<h3>Líder de Atendimento</h3>
-					<p>5° semestre - Ciência de dados</p>
-				</div>
+		</div>
+		<div class="card" onclick="toggleCard(this)">
+			<img src="icons/brain.png" alt="Machine Learning" />
+			<h3>Machine Learning</h3>
+			<p class="card-preview">Previsões precisas com inteligência artificial.</p>
+			<div class="card-detail">
+				<p>Transforme seus dados em previsões precisas, otimize operações e crie experiências personalizadas para seus clientes, tudo com o poder da inteligência artificial e aprendizado de máquina.</p>
 			</div>
-		</section>
-
-		<section id="contato" class="main-one-bg section">
-			<canvas class="neural-bg" id="neural2"></canvas>
-			<div class="main-content form-content">
-				<h2>Entre em contato</h2>
-				<div class="espaço-titulo"></div>
-				<div class="contact-card">
-					<iframe
-						class="airtable-embed"
-						src="https://airtable.com/embed/appkpT5OruaWcxE8w/pagb2H3hE4kkNKbaS/form"
-						frameborder="0"
-						width="100%"
-						height="533"
-						style="background: transparent; border: 1px solid #ccc"
-					></iframe>
-				</div>
+		</div>
+		<div class="card" onclick="toggleCard(this)">
+			<img src="icons/data-science.png" alt="Treinamento" />
+			<h3>Treinamento de dados</h3>
+			<p class="card-preview">Capacite sua equipe com cultura Data Driven e LGPD.</p>
+			<div class="card-detail">
+				<p>Capacite sua equipe para coletar, analisar e utilizar dados de forma estratégica e segura. Ensinamos como adotar práticas Data Driven em conformidade com a Lei Geral de Proteção de Dados.</p>
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
 
-		<footer class="footer-content branco-bg">
-			<div>
-				<p>&copy; 2024 DatAí Consultoria. Todos os direitos reservados.</p>
-				<p>Telefone: (61) 996882384</p>
-				<p>Email: <a href="mailto:datai.consultoria@gmail.com">datai.consultoria@gmail.com</a></p>
-				<div class="social-links">
-					<a href="https://www.instagram.com/dataiconsultoria/" target="_blank">
-						<img src="logos/logo-instagram.jpg" alt="Instagram" class="img-logo-footer" />
-					</a>
-					<a href="https://github.com/DATAI-EJ" target="_blank">
-						<img src="logos/logo-git.png" alt="GitHub" class="img-logo-footer" />
-					</a>
-				</div>
-			</div>
-		</footer>
+<section id="quem-somos" class="about">
+	<div class="about-container">
+		<div class="about-text">
+			<h2>Quem Somos</h2>
+			<p>Nós somos a DatAí, uma empresa júnior de ciência de dados composta por alunos dos cursos de Ciência de Dados e Inteligência Artificial, Ciência da Computação, Engenharia da Computação, Engenharia de Software e Análise de Sistemas do IESB.</p>
+			<p>Nosso objetivo é proporcionar soluções inovadoras e perspicazes a pessoas e empresas, utilizando dados de forma estratégica.</p>
+		</div>
+		<div class="about-logo">
+			<img src="logos/Logo-principal.jpg" alt="Logo DatAí" />
+		</div>
+	</div>
 
-		<script src="script.js"></script>
-		<script>
-const canvas = document.getElementById('neural');
-const ctx = canvas.getContext('2d');
-let W, H, nodes = [];
+	<h2 class="team-title">Nossa Equipe</h2>
+	<div class="team-grid">
+		<a href="https://www.linkedin.com/in/felipetoledoneves/" target="_blank" class="team-member">
+			<img src="imagens/felipe_fundo_azul_circle.png" alt="Felipe Toledo" />
+			<h4>Felipe Toledo</h4>
+			<span>Presidente</span>
+			<small>7° sem - Ciência de Dados</small>
+		</a>
+		<a href="https://www.linkedin.com/in/lara-alves-de-freitas/" target="_blank" class="team-member">
+			<img src="imagens/lara_azul_circle.png" alt="Lara Alves" />
+			<h4>Lara Alves</h4>
+			<span>Líder de Imagem e Publicidade</span>
+			<small>4° sem - Ciência da Computação</small>
+		</a>
+		<a href="https://www.linkedin.com/in/nicoledduarte" target="_blank" class="team-member">
+			<img src="imagens/nicole_azul_circle.png" alt="Nicole Duarte" />
+			<h4>Nicole Duarte</h4>
+			<span>Líder de Organização Empresarial</span>
+			<small>3° sem - Ciência de Dados</small>
+		</a>
+		<a href="https://www.linkedin.com/in/jorge-lima-6b4567279/" target="_blank" class="team-member">
+			<img src="imagens/jorge_fundo_azul.png" alt="Jorge Patricio" />
+			<h4>Jorge Patricio</h4>
+			<span>Líder de Atendimento</span>
+			<small>5° sem - Ciência de Dados</small>
+		</a>
+	</div>
+</section>
 
-function resize() {
-	const section = canvas.parentElement;
-	W = canvas.width = section.offsetWidth;
-	H = canvas.height = section.offsetHeight;
-}
-window.addEventListener('resize', resize);
-resize();
+<section id="contato" class="contact">
+	<canvas id="neural2"></canvas>
+	<div class="contact-content">
+		<h2>Entre em contato</h2>
+		<div class="contact-form">
+			<iframe
+				src="https://airtable.com/embed/appkpT5OruaWcxE8w/pagb2H3hE4kkNKbaS/form"
+				frameborder="0"
+				width="100%"
+				height="533"
+			></iframe>
+		</div>
+	</div>
+</section>
 
-const NODE_COUNT = 120;
-for (let i = 0; i < NODE_COUNT; i++) {
-	nodes.push({
-		x: (Math.random() - 0.5) * 800,
-		y: (Math.random() - 0.5) * 800,
-		z: (Math.random() - 0.5) * 800,
-		vx: (Math.random() - 0.5) * 0.3,
-		vy: (Math.random() - 0.5) * 0.3,
-		vz: (Math.random() - 0.5) * 0.3,
-		pulse: Math.random() * Math.PI * 2
-	});
-}
+<footer>
+	<p>&copy; 2024 DatAí Consultoria. Todos os direitos reservados.</p>
+	<p>Telefone: (61) 996882384 · Email: datai.consultoria@gmail.com</p>
+	<div class="footer-links">
+		<a href="https://www.instagram.com/dataiconsultoria/" target="_blank">Instagram</a>
+		<a href="https://github.com/DATAI-EJ" target="_blank">GitHub</a>
+	</div>
+</footer>
 
-let rotY = 0, rotX = 0.3;
-const CONNECTION_DIST = 250, FOCAL = 600;
+<script src="script.js"></script>
+<script>
+// Neural network background
+function initNeural(canvasId, nodeCount) {
+	const c = document.getElementById(canvasId);
+	const ctx = c.getContext('2d');
+	let W, H, nodes = [], rotY = 0;
 
-function project(node) {
-	const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
-	let x = node.x * cosY - node.z * sinY;
-	let z = node.x * sinY + node.z * cosY;
-	const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
-	let y = node.y * cosX - z * sinX;
-	z = node.y * sinX + z * cosX;
-	const scale = FOCAL / (FOCAL + z);
-	return { x: x * scale + W / 2, y: y * scale + H / 2, z, scale };
-}
+	function resize() {
+		W = c.width = c.parentElement.offsetWidth;
+		H = c.height = c.parentElement.offsetHeight;
+	}
+	window.addEventListener('resize', resize);
+	resize();
 
-function draw() {
-	ctx.clearRect(0, 0, W, H);
-	rotY += 0.002;
+	for (let i = 0; i < nodeCount; i++) {
+		nodes.push({
+			x: (Math.random() - 0.5) * 800, y: (Math.random() - 0.5) * 800, z: (Math.random() - 0.5) * 800,
+			vx: (Math.random() - 0.5) * 0.3, vy: (Math.random() - 0.5) * 0.3, vz: (Math.random() - 0.5) * 0.3,
+			pulse: Math.random() * Math.PI * 2
+		});
+	}
 
-	const projected = nodes.map(n => {
-		n.pulse += 0.02;
-		n.x += n.vx; n.y += n.vy; n.z += n.vz;
-		if (Math.abs(n.x) > 400) n.vx *= -1;
-		if (Math.abs(n.y) > 400) n.vy *= -1;
-		if (Math.abs(n.z) > 400) n.vz *= -1;
-		return { ...project(n), pulse: n.pulse };
-	});
+	function draw() {
+		ctx.clearRect(0, 0, W, H);
+		rotY += 0.0015;
+		const cosY = Math.cos(rotY), sinY = Math.sin(rotY), cosX = Math.cos(0.3), sinX = Math.sin(0.3);
 
-	projected.sort((a, b) => b.z - a.z);
+		const proj = nodes.map(n => {
+			n.pulse += 0.015;
+			n.x += n.vx; n.y += n.vy; n.z += n.vz;
+			if (Math.abs(n.x) > 400) n.vx *= -1;
+			if (Math.abs(n.y) > 400) n.vy *= -1;
+			if (Math.abs(n.z) > 400) n.vz *= -1;
+			let x = n.x * cosY - n.z * sinY, z = n.x * sinY + n.z * cosY;
+			let y = n.y * cosX - z * sinX; z = n.y * sinX + z * cosX;
+			const sc = 600 / (600 + z);
+			return { x: x * sc + W / 2, y: y * sc + H / 2, z, scale: sc, pulse: n.pulse };
+		});
 
-	for (let i = 0; i < projected.length; i++) {
-		for (let j = i + 1; j < projected.length; j++) {
-			const a = projected[i], b = projected[j];
-			const dx = a.x - b.x, dy = a.y - b.y;
-			const dist = Math.sqrt(dx * dx + dy * dy);
-			if (dist < CONNECTION_DIST * a.scale) {
-				const alpha = (1 - dist / (CONNECTION_DIST * a.scale)) * 0.15 * a.scale;
-				ctx.strokeStyle = `rgba(77, 142, 255, ${alpha})`;
-				ctx.lineWidth = 0.5;
-				ctx.beginPath();
-				ctx.moveTo(a.x, a.y);
-				ctx.lineTo(b.x, b.y);
-				ctx.stroke();
+		proj.sort((a, b) => b.z - a.z);
+
+		for (let i = 0; i < proj.length; i++) {
+			for (let j = i + 1; j < proj.length; j++) {
+				const a = proj[i], b = proj[j];
+				const d = Math.hypot(a.x - b.x, a.y - b.y);
+				if (d < 200 * a.scale) {
+					ctx.strokeStyle = `rgba(77,142,255,${(1 - d / (200 * a.scale)) * 0.12 * a.scale})`;
+					ctx.lineWidth = 0.5;
+					ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+				}
 			}
 		}
-	}
 
-	for (const p of projected) {
-		const size = 1.8 * p.scale;
-		const glow = (Math.sin(p.pulse) + 1) / 2;
-		const alpha = (0.3 + glow * 0.5) * p.scale;
-		ctx.beginPath();
-		ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-		ctx.fillStyle = `rgba(60, 215, 255, ${alpha})`;
-		ctx.fill();
-		if (glow > 0.7) {
-			ctx.beginPath();
-			ctx.arc(p.x, p.y, size * 2.5, 0, Math.PI * 2);
-			ctx.fillStyle = `rgba(60, 215, 255, ${alpha * 0.2})`;
-			ctx.fill();
+		for (const p of proj) {
+			const glow = (Math.sin(p.pulse) + 1) / 2;
+			const alpha = (0.3 + glow * 0.5) * p.scale;
+			ctx.beginPath(); ctx.arc(p.x, p.y, 1.8 * p.scale, 0, Math.PI * 2);
+			ctx.fillStyle = `rgba(60,215,255,${alpha})`; ctx.fill();
 		}
+		requestAnimationFrame(draw);
 	}
-	requestAnimationFrame(draw);
+	draw();
 }
-draw();
 
-// Second canvas for contact section
-(function() {
-	const c2 = document.getElementById('neural2');
-	const ctx2 = c2.getContext('2d');
-	let W2, H2, nodes2 = [];
-	function resize2() {
-		const s = c2.parentElement;
-		W2 = c2.width = s.offsetWidth;
-		H2 = c2.height = s.offsetHeight;
-	}
-	window.addEventListener('resize', resize2);
-	resize2();
-	for (let i = 0; i < 80; i++) {
-		nodes2.push({x:(Math.random()-0.5)*800,y:(Math.random()-0.5)*800,z:(Math.random()-0.5)*800,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,vz:(Math.random()-0.5)*0.3,pulse:Math.random()*Math.PI*2});
-	}
-	let rY=0;
-	function draw2() {
-		ctx2.clearRect(0,0,W2,H2);
-		rY+=0.0015;
-		const proj=nodes2.map(n=>{n.pulse+=0.02;n.x+=n.vx;n.y+=n.vy;n.z+=n.vz;if(Math.abs(n.x)>400)n.vx*=-1;if(Math.abs(n.y)>400)n.vy*=-1;if(Math.abs(n.z)>400)n.vz*=-1;const cY=Math.cos(rY),sY=Math.sin(rY);let x=n.x*cY-n.z*sY,z=n.x*sY+n.z*cY;const cX=Math.cos(0.3),sX=Math.sin(0.3);let y=n.y*cX-z*sX;z=n.y*sX+z*cX;const sc=600/(600+z);return{x:x*sc+W2/2,y:y*sc+H2/2,z,scale:sc,pulse:n.pulse};});
-		proj.sort((a,b)=>b.z-a.z);
-		for(let i=0;i<proj.length;i++)for(let j=i+1;j<proj.length;j++){const a=proj[i],b=proj[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<250*a.scale){const al=(1-d/(250*a.scale))*0.15*a.scale;ctx2.strokeStyle=`rgba(77,142,255,${al})`;ctx2.lineWidth=0.5;ctx2.beginPath();ctx2.moveTo(a.x,a.y);ctx2.lineTo(b.x,b.y);ctx2.stroke();}}
-		for(const p of proj){const sz=1.8*p.scale,gl=(Math.sin(p.pulse)+1)/2,al=(0.3+gl*0.5)*p.scale;ctx2.beginPath();ctx2.arc(p.x,p.y,sz,0,Math.PI*2);ctx2.fillStyle=`rgba(60,215,255,${al})`;ctx2.fill();}
-		requestAnimationFrame(draw2);
-	}
-	draw2();
-})();
-		</script>
-	</body>
+initNeural('neural', 100);
+initNeural('neural2', 60);
+</script>
+</body>
 </html>
