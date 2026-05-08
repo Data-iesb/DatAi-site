@@ -157,8 +157,8 @@ function initNeural(canvasId, nodeCount, light) {
 	const c = document.getElementById(canvasId);
 	const ctx = c.getContext('2d');
 	let W, H, nodes = [], rotY = 0;
-	const lineColor = light ? '0,80,200' : '77,142,255';
-	const nodeColor = light ? '0,80,200' : '60,215,255';
+	const lineColor = light ? '0,80,200' : '255,255,255';
+	const nodeColor = light ? '0,80,200' : '255,255,255';
 
 	function resize() {
 		W = c.width = c.parentElement.offsetWidth;
