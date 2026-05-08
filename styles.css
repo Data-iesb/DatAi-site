@@ -116,6 +116,7 @@ nav {
 	justify-content: center;
 	overflow: hidden;
 	padding: 6rem 2rem 4rem;
+	background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 50%, #081020 100%);
 }
 
 .hero canvas {
@@ -407,13 +408,7 @@ nav {
 	position: relative;
 	padding: 6rem 2rem;
 	overflow: hidden;
-	background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 50%, #081020 100%);
-}
-
-.contact canvas {
-	position: absolute;
-	inset: 0;
-	z-index: 0;
+	background: var(--surface);
 }
 
 .contact-content {
