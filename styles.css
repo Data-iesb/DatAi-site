@@ -194,10 +194,6 @@ nav {
 	grid-template-columns: 1.5fr 1fr;
 	gap: 3rem;
 	align-items: center;
-	background: rgba(255, 255, 255, 0.85);
-	backdrop-filter: blur(8px);
-	border-radius: 16px;
-	padding: 3rem;
 }
 
 .about-text h2 {
@@ -241,9 +237,6 @@ nav {
 	max-width: 900px;
 	margin: 0 auto;
 	padding: 2rem;
-	background: rgba(255, 255, 255, 0.85);
-	backdrop-filter: blur(8px);
-	border-radius: 16px;
 }
 
 .team-member {
