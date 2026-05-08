@@ -184,7 +184,7 @@ nav {
 /* About */
 .about {
 	padding: 6rem 2rem;
-	background: #fff;
+	background: #f0f4fa;
 	color: var(--blue);
 	position: relative;
 	overflow: hidden;
