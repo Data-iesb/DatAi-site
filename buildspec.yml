@@ -3,7 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Deploying to S3..."
+      - aws s3 sync . s3://datai.tec.br --delete --exclude ".git/*" --exclude "buildspec.yml" --exclude "README.md"
   post_build:
     commands:
-      - aws s3 sync . s3://datai.tec.br --delete --exclude ".git/*" --exclude "buildspec.yml" --exclude "README.md"
+      - aws cloudfront create-invalidation --distribution-id E7UM7BW7AAB7B --paths "/*"
