@@ -76,31 +76,39 @@
 	</div>
 
 	<h2 class="team-title">Nossa Equipe</h2>
-	<div class="team-grid">
-		<a href="https://www.linkedin.com/in/felipetoledoneves/" target="_blank" class="team-member">
-			<img src="imagens/felipe_fundo_azul_circle.png" alt="Felipe Toledo" />
-			<h4>Felipe Toledo</h4>
-			<span>Presidente</span>
-			<small>7° sem - Ciência de Dados</small>
-		</a>
-		<a href="https://www.linkedin.com/in/lara-alves-de-freitas/" target="_blank" class="team-member">
-			<img src="imagens/lara_azul_circle.png" alt="Lara Alves" />
-			<h4>Lara Alves</h4>
-			<span>Líder de Imagem e Publicidade</span>
-			<small>4° sem - Ciência da Computação</small>
-		</a>
-		<a href="https://www.linkedin.com/in/nicoledduarte" target="_blank" class="team-member">
-			<img src="imagens/nicole_azul_circle.png" alt="Nicole Duarte" />
-			<h4>Nicole Duarte</h4>
-			<span>Líder de Organização Empresarial</span>
-			<small>3° sem - Ciência de Dados</small>
-		</a>
-		<a href="https://www.linkedin.com/in/jorge-lima-6b4567279/" target="_blank" class="team-member">
-			<img src="imagens/jorge_fundo_azul.png" alt="Jorge Patricio" />
-			<h4>Jorge Patricio</h4>
-			<span>Líder de Atendimento</span>
-			<small>5° sem - Ciência de Dados</small>
-		</a>
+	<div class="carousel-wrap">
+		<div class="carousel-stage" id="teamCarousel">
+			<button class="carousel-nav prev" onclick="navTeam(-1)">❮</button>
+			<div class="carousel-card" data-idx="0">
+				<img src="imagens/felipe_fundo_azul_circle.png" alt="Felipe Toledo" />
+				<h4>Felipe Toledo</h4>
+				<span>Presidente</span>
+				<small>7° sem - Ciência de Dados</small>
+				<a href="https://www.linkedin.com/in/felipetoledoneves/" target="_blank">LinkedIn</a>
+			</div>
+			<div class="carousel-card" data-idx="1">
+				<img src="imagens/lara_azul_circle.png" alt="Lara Alves" />
+				<h4>Lara Alves</h4>
+				<span>Líder de Imagem e Publicidade</span>
+				<small>4° sem - Ciência da Computação</small>
+				<a href="https://www.linkedin.com/in/lara-alves-de-freitas/" target="_blank">LinkedIn</a>
+			</div>
+			<div class="carousel-card" data-idx="2">
+				<img src="imagens/nicole_azul_circle.png" alt="Nicole Duarte" />
+				<h4>Nicole Duarte</h4>
+				<span>Líder de Organização Empresarial</span>
+				<small>3° sem - Ciência de Dados</small>
+				<a href="https://www.linkedin.com/in/nicoledduarte" target="_blank">LinkedIn</a>
+			</div>
+			<div class="carousel-card" data-idx="3">
+				<img src="imagens/jorge_fundo_azul.png" alt="Jorge Patricio" />
+				<h4>Jorge Patricio</h4>
+				<span>Líder de Atendimento</span>
+				<small>5° sem - Ciência de Dados</small>
+				<a href="https://www.linkedin.com/in/jorge-lima-6b4567279/" target="_blank">LinkedIn</a>
+			</div>
+			<button class="carousel-nav next" onclick="navTeam(1)">❯</button>
+		</div>
 	</div>
 </section>
 
