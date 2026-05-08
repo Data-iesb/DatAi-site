@@ -184,7 +184,7 @@ nav {
 /* About */
 .about {
 	padding: 6rem 2rem;
-	background: #f0f4fa;
+	background: linear-gradient(180deg, #f8faff 0%, #e8eef8 50%, #f0f4fa 100%);
 	color: var(--blue);
 }
 
