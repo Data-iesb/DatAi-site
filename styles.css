@@ -265,12 +265,13 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background: linear-gradient(145deg, #ffffff, #f0f4ff);
-	border: 1px solid rgba(2, 40, 89, 0.08);
+	background: rgba(8, 11, 22, 0.9);
+	border: 1px solid rgba(60, 215, 255, 0.2);
 	border-radius: 20px;
 	padding: 2rem 1.2rem 1.5rem;
 	transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
 	transform-origin: center center;
+	backdrop-filter: blur(8px);
 }
 
 .carousel-card img {
@@ -279,44 +280,44 @@ nav {
 	border-radius: 50%;
 	object-fit: cover;
 	margin-bottom: 1rem;
-	border: 3px solid rgba(2, 40, 89, 0.1);
-	box-shadow: 0 6px 20px rgba(2, 40, 89, 0.15);
+	border: 3px solid rgba(60, 215, 255, 0.3);
+	box-shadow: 0 0 20px rgba(60, 215, 255, 0.15);
 }
 
 .carousel-card h4 {
 	font-size: 1.05rem;
 	font-weight: 700;
-	color: var(--blue);
+	color: #fff;
 	margin-bottom: 0.3rem;
 }
 
 .carousel-card span {
 	font-size: 0.78rem;
-	color: var(--blue-light);
+	color: var(--cyan);
 	font-weight: 600;
 	margin-bottom: 0.2rem;
 }
 
 .carousel-card small {
 	font-size: 0.7rem;
-	color: #888;
+	color: var(--text-muted);
 	margin-bottom: 0.8rem;
 }
 
 .carousel-card a {
 	font-size: 0.72rem;
-	color: #fff;
-	background: linear-gradient(135deg, var(--blue), var(--blue-light));
+	color: #080B16;
+	background: linear-gradient(135deg, var(--cyan), var(--blue-light));
 	padding: 0.35rem 1rem;
 	border-radius: 20px;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 700;
 	transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .carousel-card a:hover {
 	transform: scale(1.05);
-	box-shadow: 0 4px 12px rgba(2, 40, 89, 0.3);
+	box-shadow: 0 4px 16px rgba(60, 215, 255, 0.4);
 }
 
 .carousel-nav {
