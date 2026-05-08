@@ -2,6 +2,36 @@ function toggleCard(el) {
 	el.classList.toggle('open');
 }
 
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+	e.preventDefault();
+	const btn = e.target.querySelector('button');
+	const feedback = document.getElementById('formFeedback');
+	const data = Object.fromEntries(new FormData(e.target));
+
+	btn.disabled = true;
+	btn.textContent = 'Enviando...';
+	feedback.textContent = '';
+
+	try {
+		const res = await fetch('https://derkhzy7yd.execute-api.us-east-1.amazonaws.com/Prod/contact', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data)
+		});
+		if (res.ok) {
+			feedback.style.color = '#4eff91';
+			feedback.textContent = 'Mensagem enviada com sucesso!';
+			e.target.reset();
+		} else throw new Error();
+	} catch {
+		feedback.style.color = '#ff6b6b';
+		feedback.textContent = 'Erro ao enviar. Tente novamente.';
+	}
+	btn.disabled = false;
+	btn.textContent = 'Enviar';
+});
+
 // Team 3D Carousel
 let teamIdx = 0;
 const teamCards = document.querySelectorAll('.carousel-card');

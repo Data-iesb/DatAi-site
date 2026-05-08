@@ -118,15 +118,14 @@
 	<canvas id="neural2"></canvas>
 	<div class="contact-content">
 		<h2>Entre em contato</h2>
-		<div class="contact-form">
-			<iframe
-				src="https://airtable.com/embed/appkpT5OruaWcxE8w/pagb2H3hE4kkNKbaS/form"
-				frameborder="0"
-				width="100%"
-				height="533"
-				style="background: transparent; border-radius: 4px;"
-			></iframe>
-		</div>
+		<form id="contactForm" class="contact-form">
+			<input type="text" name="nome" placeholder="Nome" required />
+			<input type="email" name="email" placeholder="Email" required />
+			<input type="tel" name="telefone" placeholder="Telefone" />
+			<textarea name="mensagem" placeholder="Sua mensagem..." rows="4" required></textarea>
+			<button type="submit">Enviar</button>
+			<p id="formFeedback"></p>
+		</form>
 	</div>
 </section>
 
