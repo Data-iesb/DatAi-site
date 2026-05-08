@@ -101,8 +101,8 @@ nav {
 }
 
 @keyframes titlePulse {
-	0%, 100% { font-size: 5rem; text-shadow: 0 0 10px rgba(60, 215, 255, 0.3); }
-	50% { font-size: 5.5rem; text-shadow: 0 0 40px rgba(60, 215, 255, 0.8), 0 0 80px rgba(60, 215, 255, 0.4); }
+	0%, 100% { font-size: 5rem; text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+	50% { font-size: 5.5rem; text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.3); }
 }
 
 .hero-subtitle {
