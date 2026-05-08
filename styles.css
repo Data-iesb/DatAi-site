@@ -407,6 +407,7 @@ nav {
 	position: relative;
 	padding: 6rem 2rem;
 	overflow: hidden;
+	background: linear-gradient(135deg, #0a1628 0%, #0d1f3c 50%, #081020 100%);
 }
 
 .contact canvas {
@@ -418,7 +419,7 @@ nav {
 .contact-content {
 	position: relative;
 	z-index: 1;
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -429,11 +430,17 @@ nav {
 	margin-bottom: 2rem;
 }
 
+.contact-layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: center;
+	text-align: left;
+}
+
 .contact-hero-img {
 	width: 100%;
-	max-width: 500px;
 	border-radius: 16px;
-	margin-bottom: 2rem;
 	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -442,8 +449,6 @@ nav {
 	flex-direction: column;
 	gap: 1rem;
 	width: 100%;
-	max-width: 500px;
-	margin: 0 auto;
 }
 
 .contact-form input,
@@ -596,6 +601,8 @@ footer p { margin-bottom: 0.3rem; }
 	.carousel-nav.next { right: 0.3rem; }
 	.contact { padding: 4rem 1rem; }
 	.contact-content h2 { font-size: 1.6rem; }
+	.contact-layout { grid-template-columns: 1fr; }
+	.contact-hero-img { max-width: 300px; margin: 0 auto; }
 	.contact-form { max-width: 100%; }
 	.contact-form input,
 	.contact-form textarea { font-size: 16px; padding: 0.75rem; }
