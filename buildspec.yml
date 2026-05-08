@@ -1,0 +1,9 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Deploying to S3..."
+  post_build:
+    commands:
+      - aws s3 sync . s3://datai.tec.br --delete --exclude ".git/*" --exclude "buildspec.yml" --exclude "README.md"
