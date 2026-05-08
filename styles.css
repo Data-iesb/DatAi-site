@@ -427,11 +427,11 @@ footer p { margin-bottom: 0.3rem; }
 .footer-credits {
 	margin-top: 0.8rem;
 	font-size: 0.75rem;
-	color: var(--text-muted);
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-credits a {
-	color: var(--cyan);
+	color: #fff;
 	text-decoration: none;
 }
 
