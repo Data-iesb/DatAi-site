@@ -140,6 +140,7 @@ nav {
 	height: 48px;
 	margin-bottom: 1rem;
 	filter: brightness(0) invert(1);
+	mix-blend-mode: lighten;
 }
 
 .card h3 {
