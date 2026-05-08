@@ -293,6 +293,7 @@ nav {
 	margin-bottom: 1rem;
 	border: 3px solid rgba(255, 255, 255, 0.15);
 	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	background: #0E1425;
 }
 
 .carousel-card h4 {
