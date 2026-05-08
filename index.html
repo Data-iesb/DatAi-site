@@ -177,8 +177,8 @@ function initNeural(canvasId, nodeCount, light) {
 				const a = proj[i], b = proj[j];
 				const d = Math.hypot(a.x - b.x, a.y - b.y);
 				if (d < 200 * a.scale) {
-					ctx.strokeStyle = `rgba(${lineColor},${(1 - d / (200 * a.scale)) * 0.12 * a.scale})`;
-					ctx.lineWidth = 0.5;
+					ctx.strokeStyle = `rgba(${lineColor},${(1 - d / (200 * a.scale)) * 0.5 * a.scale})`;
+					ctx.lineWidth = 1;
 					ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
 				}
 			}
