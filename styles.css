@@ -408,6 +408,19 @@ footer p { margin-bottom: 0.3rem; }
 
 .footer-links a:hover { text-decoration: underline; }
 
+.footer-credits {
+	margin-top: 0.8rem;
+	font-size: 0.75rem;
+	color: var(--text-muted);
+}
+
+.footer-credits a {
+	color: var(--cyan);
+	text-decoration: none;
+}
+
+.footer-credits a:hover { text-decoration: underline; }
+
 /* Responsive */
 @media (max-width: 768px) {
 	.hero-title { font-size: 3rem; }
