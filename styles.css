@@ -429,6 +429,14 @@ nav {
 	margin-bottom: 2rem;
 }
 
+.contact-hero-img {
+	width: 100%;
+	max-width: 500px;
+	border-radius: 16px;
+	margin-bottom: 2rem;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
 .contact-form {
 	display: flex;
 	flex-direction: column;
