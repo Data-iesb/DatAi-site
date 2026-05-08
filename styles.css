@@ -260,55 +260,64 @@ nav {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 200px;
+	width: 220px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background: #fff;
-	border: 1px solid rgba(2, 40, 89, 0.12);
-	border-radius: 16px;
-	padding: 1.5rem 1rem;
+	background: linear-gradient(145deg, #ffffff, #f0f4ff);
+	border: 1px solid rgba(2, 40, 89, 0.08);
+	border-radius: 20px;
+	padding: 2rem 1.2rem 1.5rem;
 	transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
 	transform-origin: center center;
 }
 
 .carousel-card img {
-	width: 90px;
-	height: 90px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 	object-fit: cover;
-	margin-bottom: 0.75rem;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	margin-bottom: 1rem;
+	border: 3px solid rgba(2, 40, 89, 0.1);
+	box-shadow: 0 6px 20px rgba(2, 40, 89, 0.15);
 }
 
 .carousel-card h4 {
-	font-size: 0.95rem;
+	font-size: 1.05rem;
 	font-weight: 700;
 	color: var(--blue);
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.3rem;
 }
 
 .carousel-card span {
-	font-size: 0.75rem;
+	font-size: 0.78rem;
 	color: var(--blue-light);
-	font-weight: 500;
+	font-weight: 600;
+	margin-bottom: 0.2rem;
 }
 
 .carousel-card small {
 	font-size: 0.7rem;
-	color: #666;
-	margin-bottom: 0.5rem;
+	color: #888;
+	margin-bottom: 0.8rem;
 }
 
 .carousel-card a {
-	font-size: 0.7rem;
-	color: #022859;
+	font-size: 0.72rem;
+	color: #fff;
+	background: linear-gradient(135deg, var(--blue), var(--blue-light));
+	padding: 0.35rem 1rem;
+	border-radius: 20px;
 	text-decoration: none;
 	font-weight: 600;
+	transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.carousel-card a:hover { text-decoration: underline; }
+.carousel-card a:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 12px rgba(2, 40, 89, 0.3);
+}
 
 .carousel-nav {
 	position: absolute;
