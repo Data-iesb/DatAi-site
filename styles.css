@@ -41,9 +41,21 @@ body {
 }
 
 .main-one-bg {
-	background-image: url("imagens/endless-constellation.svg");
-	background-size: auto;
-	background-position: center center;
+	background: #080B16;
+	position: relative;
+	overflow: hidden;
+}
+
+.main-one-bg canvas.neural-bg {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.main-one-bg > .main-content,
+.main-one-bg > .main-content.form-content {
+	position: relative;
+	z-index: 1;
 }
 
 .main-two-bg {

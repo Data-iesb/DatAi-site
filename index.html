@@ -36,6 +36,7 @@
 		</aside>
 
 		<section id="inicio" class="main-one-bg section">
+			<canvas class="neural-bg" id="neural"></canvas>
 			<div class="main-content inicio-content">
 				<h1>DatAí,<br />sua solução em dados.</h1>
 				<section id="servicos" class="servicos-content">
@@ -166,6 +167,7 @@
 		</section>
 
 		<section id="contato" class="main-one-bg section">
+			<canvas class="neural-bg" id="neural2"></canvas>
 			<div class="main-content form-content">
 				<h2>Entre em contato</h2>
 				<div class="espaço-titulo"></div>
@@ -199,5 +201,124 @@
 		</footer>
 
 		<script src="script.js"></script>
+		<script>
+const canvas = document.getElementById('neural');
+const ctx = canvas.getContext('2d');
+let W, H, nodes = [];
+
+function resize() {
+	const section = canvas.parentElement;
+	W = canvas.width = section.offsetWidth;
+	H = canvas.height = section.offsetHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+const NODE_COUNT = 120;
+for (let i = 0; i < NODE_COUNT; i++) {
+	nodes.push({
+		x: (Math.random() - 0.5) * 800,
+		y: (Math.random() - 0.5) * 800,
+		z: (Math.random() - 0.5) * 800,
+		vx: (Math.random() - 0.5) * 0.3,
+		vy: (Math.random() - 0.5) * 0.3,
+		vz: (Math.random() - 0.5) * 0.3,
+		pulse: Math.random() * Math.PI * 2
+	});
+}
+
+let rotY = 0, rotX = 0.3;
+const CONNECTION_DIST = 250, FOCAL = 600;
+
+function project(node) {
+	const cosY = Math.cos(rotY), sinY = Math.sin(rotY);
+	let x = node.x * cosY - node.z * sinY;
+	let z = node.x * sinY + node.z * cosY;
+	const cosX = Math.cos(rotX), sinX = Math.sin(rotX);
+	let y = node.y * cosX - z * sinX;
+	z = node.y * sinX + z * cosX;
+	const scale = FOCAL / (FOCAL + z);
+	return { x: x * scale + W / 2, y: y * scale + H / 2, z, scale };
+}
+
+function draw() {
+	ctx.clearRect(0, 0, W, H);
+	rotY += 0.002;
+
+	const projected = nodes.map(n => {
+		n.pulse += 0.02;
+		n.x += n.vx; n.y += n.vy; n.z += n.vz;
+		if (Math.abs(n.x) > 400) n.vx *= -1;
+		if (Math.abs(n.y) > 400) n.vy *= -1;
+		if (Math.abs(n.z) > 400) n.vz *= -1;
+		return { ...project(n), pulse: n.pulse };
+	});
+
+	projected.sort((a, b) => b.z - a.z);
+
+	for (let i = 0; i < projected.length; i++) {
+		for (let j = i + 1; j < projected.length; j++) {
+			const a = projected[i], b = projected[j];
+			const dx = a.x - b.x, dy = a.y - b.y;
+			const dist = Math.sqrt(dx * dx + dy * dy);
+			if (dist < CONNECTION_DIST * a.scale) {
+				const alpha = (1 - dist / (CONNECTION_DIST * a.scale)) * 0.15 * a.scale;
+				ctx.strokeStyle = `rgba(77, 142, 255, ${alpha})`;
+				ctx.lineWidth = 0.5;
+				ctx.beginPath();
+				ctx.moveTo(a.x, a.y);
+				ctx.lineTo(b.x, b.y);
+				ctx.stroke();
+			}
+		}
+	}
+
+	for (const p of projected) {
+		const size = 1.8 * p.scale;
+		const glow = (Math.sin(p.pulse) + 1) / 2;
+		const alpha = (0.3 + glow * 0.5) * p.scale;
+		ctx.beginPath();
+		ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+		ctx.fillStyle = `rgba(60, 215, 255, ${alpha})`;
+		ctx.fill();
+		if (glow > 0.7) {
+			ctx.beginPath();
+			ctx.arc(p.x, p.y, size * 2.5, 0, Math.PI * 2);
+			ctx.fillStyle = `rgba(60, 215, 255, ${alpha * 0.2})`;
+			ctx.fill();
+		}
+	}
+	requestAnimationFrame(draw);
+}
+draw();
+
+// Second canvas for contact section
+(function() {
+	const c2 = document.getElementById('neural2');
+	const ctx2 = c2.getContext('2d');
+	let W2, H2, nodes2 = [];
+	function resize2() {
+		const s = c2.parentElement;
+		W2 = c2.width = s.offsetWidth;
+		H2 = c2.height = s.offsetHeight;
+	}
+	window.addEventListener('resize', resize2);
+	resize2();
+	for (let i = 0; i < 80; i++) {
+		nodes2.push({x:(Math.random()-0.5)*800,y:(Math.random()-0.5)*800,z:(Math.random()-0.5)*800,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,vz:(Math.random()-0.5)*0.3,pulse:Math.random()*Math.PI*2});
+	}
+	let rY=0;
+	function draw2() {
+		ctx2.clearRect(0,0,W2,H2);
+		rY+=0.0015;
+		const proj=nodes2.map(n=>{n.pulse+=0.02;n.x+=n.vx;n.y+=n.vy;n.z+=n.vz;if(Math.abs(n.x)>400)n.vx*=-1;if(Math.abs(n.y)>400)n.vy*=-1;if(Math.abs(n.z)>400)n.vz*=-1;const cY=Math.cos(rY),sY=Math.sin(rY);let x=n.x*cY-n.z*sY,z=n.x*sY+n.z*cY;const cX=Math.cos(0.3),sX=Math.sin(0.3);let y=n.y*cX-z*sX;z=n.y*sX+z*cX;const sc=600/(600+z);return{x:x*sc+W2/2,y:y*sc+H2/2,z,scale:sc,pulse:n.pulse};});
+		proj.sort((a,b)=>b.z-a.z);
+		for(let i=0;i<proj.length;i++)for(let j=i+1;j<proj.length;j++){const a=proj[i],b=proj[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<250*a.scale){const al=(1-d/(250*a.scale))*0.15*a.scale;ctx2.strokeStyle=`rgba(77,142,255,${al})`;ctx2.lineWidth=0.5;ctx2.beginPath();ctx2.moveTo(a.x,a.y);ctx2.lineTo(b.x,b.y);ctx2.stroke();}}
+		for(const p of proj){const sz=1.8*p.scale,gl=(Math.sin(p.pulse)+1)/2,al=(0.3+gl*0.5)*p.scale;ctx2.beginPath();ctx2.arc(p.x,p.y,sz,0,Math.PI*2);ctx2.fillStyle=`rgba(60,215,255,${al})`;ctx2.fill();}
+		requestAnimationFrame(draw2);
+	}
+	draw2();
+})();
+		</script>
 	</body>
 </html>
