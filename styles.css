@@ -95,19 +95,14 @@ nav {
 	font-size: 5rem;
 	font-weight: 800;
 	letter-spacing: -0.03em;
-	background: linear-gradient(135deg, var(--cyan), var(--blue-light), #adc6ff, var(--cyan));
-	background-size: 300% 300%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
+	color: #fff;
 	margin-bottom: 0.5rem;
-	animation: titleShimmer 4s ease-in-out infinite;
+	animation: titlePulse 3s ease-in-out infinite;
 }
 
-@keyframes titleShimmer {
-	0% { background-position: 0% 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0% 50%; }
+@keyframes titlePulse {
+	0%, 100% { font-size: 5rem; text-shadow: 0 0 10px rgba(60, 215, 255, 0.3); }
+	50% { font-size: 5.5rem; text-shadow: 0 0 40px rgba(60, 215, 255, 0.8), 0 0 80px rgba(60, 215, 255, 0.4); }
 }
 
 .hero-subtitle {
