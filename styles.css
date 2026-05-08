@@ -408,7 +408,7 @@ nav {
 	position: relative;
 	padding: 6rem 2rem;
 	overflow: hidden;
-	background: var(--surface);
+	background: radial-gradient(ellipse at center, #131d35 0%, #0a0f1a 70%);
 }
 
 .contact-particles {
