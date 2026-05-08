@@ -148,19 +148,24 @@ nav ul li a:hover {
 }
 
 .service-card {
-	background-color: #f9f9f9;
-	border-radius: 7px;
+	background: rgba(14, 20, 37, 0.8);
+	backdrop-filter: blur(12px);
+	border: 1px solid rgba(60, 215, 255, 0.15);
+	border-radius: 16px;
 	padding: 1.5em;
 	width: 224px;
 	height: 191px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%);
-	transition: 1s;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
-.service-card h3 { color: var(--azul-escuro); }
+.service-card h3 { color: #ffffff; font-size: 1.2rem; }
 
-.service-card:hover { transform: translateY(-10px); }
+.service-card:hover {
+	transform: translateY(-10px);
+	border-color: rgba(60, 215, 255, 0.5);
+	box-shadow: 0 12px 40px rgba(60, 215, 255, 0.15);
+}
 
 .service-card img {
 	max-width: 75px;
@@ -169,31 +174,39 @@ nav ul li a:hover {
 }
 
 .service-card button {
-	background-color: var(--azul-escuro);
-	color: white;
+	background: linear-gradient(135deg, #3cd7ff, #4d8eff);
+	color: #080B16;
 	border: none;
-	border-radius: 5px;
-	padding: 10px 15px;
+	border-radius: 8px;
+	padding: 8px 14px;
 	cursor: pointer;
 	margin-top: 10px;
+	font-weight: bold;
+	font-size: 0.85rem;
+	transition: transform 0.2s, box-shadow 0.3s;
 }
 
-.service-card button:hover { background-color: var(--azul-cinzento); }
+.service-card button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 15px rgba(60, 215, 255, 0.3);
+}
 
 .service-card.expanded {
 	width: 500px;
 	height: 400px;
 	padding: 20px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	background: rgba(14, 20, 37, 0.95);
+	border-color: rgba(60, 215, 255, 0.4);
+	box-shadow: 0 12px 48px rgba(60, 215, 255, 0.2);
 	overflow: auto;
-	transition: 1s;
+	transition: all 0.3s;
 }
 
 .additional-text {
 	display: none;
 	margin: 10px;
 	font-size: 14px;
-	color: #333;
+	color: rgba(220, 225, 251, 0.85);
 }
 
 .service-card.expanded .additional-text {
@@ -204,9 +217,10 @@ nav ul li a:hover {
 	font-weight: bold;
 	font-size: large;
 	margin: 5px;
+	color: #3cd7ff;
 }
 
-.service-card.expanded li { margin-bottom: 2px; }
+.service-card.expanded li { margin-bottom: 2px; color: rgba(220, 225, 251, 0.8); }
 
 /* Quem Somos */
 .quem-somos-content {
