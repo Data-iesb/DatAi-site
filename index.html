@@ -228,7 +228,7 @@ initNeural('neural2', 60);
 			ctx.fillText(char, x, y);
 
 			if (y > H && Math.random() > 0.98) drops[i] = 0;
-			drops[i] += 0.4 + Math.random() * 0.3;
+			drops[i] += 0.15 + Math.random() * 0.1;
 		}
 		requestAnimationFrame(draw);
 	}
