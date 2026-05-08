@@ -101,8 +101,8 @@ nav {
 }
 
 @keyframes titlePulse {
-	0%, 100% { font-size: 5rem; text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
-	50% { font-size: 5.5rem; text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.3); }
+	0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); opacity: 1; }
+	50% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.3); opacity: 0.9; }
 }
 
 .hero-subtitle {
@@ -529,24 +529,34 @@ footer p { margin-bottom: 0.3rem; }
 	.hero { padding: 4rem 1rem 2rem; }
 	.services-grid { grid-template-columns: 1fr; }
 	.card { padding: 1.5rem; }
+	.card img { width: 36px; height: 36px; }
+	.card h3 { font-size: 0.95rem; }
 	.about { padding: 3rem 1rem; }
 	.about-container { gap: 1.5rem; }
 	.about-text { padding: 1.5rem; }
 	.about-text h2 { font-size: 1.6rem; }
 	.about-text p { font-size: 0.9rem; }
-	.carousel-stage { height: 260px; }
-	.carousel-card { width: 160px; padding: 1.2rem 0.8rem; }
-	.carousel-card img { width: 70px; height: 70px; }
-	.carousel-card h4 { font-size: 0.9rem; }
-	.carousel-nav { width: 30px; height: 30px; font-size: 0.8rem; }
-	.carousel-nav.prev { left: 0.5rem; }
-	.carousel-nav.next { right: 0.5rem; }
+	.carousel-stage { height: 260px; overflow: hidden; }
+	.carousel-card { width: 150px; padding: 1.2rem 0.8rem; }
+	.carousel-card img { width: 65px; height: 65px; }
+	.carousel-card h4 { font-size: 0.85rem; }
+	.carousel-card span { font-size: 0.65rem; }
+	.carousel-card small { font-size: 0.6rem; }
+	.carousel-card a { font-size: 0.65rem; padding: 0.3rem 0.8rem; }
+	.carousel-nav { width: 28px; height: 28px; font-size: 0.75rem; }
+	.carousel-nav.prev { left: 0.3rem; }
+	.carousel-nav.next { right: 0.3rem; }
 	.contact { padding: 4rem 1rem; }
 	.contact-content h2 { font-size: 1.6rem; }
+	.contact-form { max-width: 100%; }
+	.contact-form input,
+	.contact-form textarea { font-size: 16px; padding: 0.75rem; }
 	.footer-links { flex-direction: column; align-items: center; gap: 0.8rem; }
 	.footer-credits { font-size: 0.65rem; }
 	.team-section { padding-bottom: 3rem; }
 	.team-title { font-size: 1.4rem; padding-top: 3rem; }
+	.nav-container { padding: 0.75rem 1rem; }
+	.logo img { height: 32px; }
 }
 
 /* Responsive: Large screens ≥ 1920px */
