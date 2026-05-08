@@ -203,6 +203,14 @@ nav {
 	color: var(--blue);
 }
 
+.about-text {
+	background: rgba(255, 255, 255, 0.92);
+	border: 1px solid rgba(2, 40, 89, 0.15);
+	border-radius: 16px;
+	padding: 2.5rem;
+	box-shadow: 0 4px 20px rgba(2, 40, 89, 0.08);
+}
+
 .about-text p {
 	font-size: 1rem;
 	color: #333;
