@@ -91,16 +91,17 @@ nav {
 }
 
 .hero-title {
-	font-size: 4rem;
+	font-family: 'Syne', sans-serif;
+	font-size: 5rem;
 	font-weight: 800;
-	background: linear-gradient(135deg, #fff, var(--cyan), var(--blue-light), #fff);
-	background-size: 400% 400%;
+	letter-spacing: -0.03em;
+	background: linear-gradient(135deg, var(--cyan), var(--blue-light), #adc6ff, var(--cyan));
+	background-size: 300% 300%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
 	margin-bottom: 0.5rem;
-	animation: titleShimmer 3s ease-in-out infinite;
-	text-shadow: 0 0 40px rgba(60, 215, 255, 0.3);
+	animation: titleShimmer 4s ease-in-out infinite;
 }
 
 @keyframes titleShimmer {
