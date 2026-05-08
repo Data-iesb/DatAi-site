@@ -80,7 +80,10 @@ body {
 }
 
 .menu {
-	background-color: var(--cor-do-texto);
+	background: rgba(255, 255, 255, 0.75);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border-bottom: 1px solid rgba(2, 40, 89, 0.1);
 	position: fixed;
 	top: 0;
 	left: 0;
