@@ -140,7 +140,7 @@ nav {
 	letter-spacing: -0.03em;
 	color: #fff;
 	margin-bottom: 0.5rem;
-	animation: titlePulse 3s ease-in-out infinite;
+	animation: titlePulse 6s ease-in-out infinite;
 }
 
 @keyframes titlePulse {
