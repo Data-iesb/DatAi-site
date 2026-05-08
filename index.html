@@ -12,10 +12,13 @@
 <nav id="navbar">
 	<div class="nav-container">
 		<a href="#inicio" class="logo"><img src="logos/Logo-principal.jpg" alt="DatAí" /></a>
-		<ul class="nav-links">
-			<li><a href="#inicio">Início</a></li>
-			<li><a href="#quem-somos">Quem Somos</a></li>
-			<li><a href="#contato">Contato</a></li>
+		<button class="hamburger" id="hamburger" onclick="toggleMenu()">
+			<span></span><span></span><span></span>
+		</button>
+		<ul class="nav-links" id="navLinks">
+			<li><a href="#inicio" onclick="closeMenu()">Início</a></li>
+			<li><a href="#quem-somos" onclick="closeMenu()">Quem Somos</a></li>
+			<li><a href="#contato" onclick="closeMenu()">Contato</a></li>
 		</ul>
 	</div>
 </nav>

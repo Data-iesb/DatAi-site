@@ -2,6 +2,16 @@ function toggleCard(el) {
 	el.classList.toggle('open');
 }
 
+function toggleMenu() {
+	document.getElementById('hamburger').classList.toggle('open');
+	document.getElementById('navLinks').classList.toggle('open');
+}
+
+function closeMenu() {
+	document.getElementById('hamburger').classList.remove('open');
+	document.getElementById('navLinks').classList.remove('open');
+}
+
 // Contact form
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
 	e.preventDefault();
