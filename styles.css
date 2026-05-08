@@ -196,9 +196,7 @@ nav {
 	z-index: 0;
 }
 
-.about-container,
-.team-title,
-.team-grid {
+.about-container {
 	position: relative;
 	z-index: 1;
 }
@@ -255,8 +253,14 @@ nav {
 	text-align: center;
 	font-size: 2rem;
 	font-weight: 700;
-	margin: 4rem 0 2rem;
-	color: var(--blue);
+	margin: 0;
+	padding-top: 4rem;
+	color: #fff;
+}
+
+.team-section {
+	background: linear-gradient(180deg, #0a1628 0%, #121d35 50%, #0a1628 100%);
+	padding-bottom: 4rem;
 }
 
 /* 3D Carousel */
