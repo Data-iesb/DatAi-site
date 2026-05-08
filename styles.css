@@ -413,7 +413,7 @@ footer p { margin-bottom: 0.3rem; }
 }
 
 .footer-links a {
-	color: var(--cyan);
+	color: #fff;
 	text-decoration: none;
 	font-size: 0.8rem;
 	display: flex;
