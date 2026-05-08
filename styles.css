@@ -563,6 +563,23 @@ footer p { margin-bottom: 0.3rem; }
 
 .footer-credits a:hover { text-decoration: underline; }
 
+.footer-logos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 1rem;
+}
+
+.footer-logos img {
+	height: 30px;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	filter: brightness(0) invert(1);
+}
+
+.footer-logos img:hover { opacity: 1; }
+
 /* Responsive: Laptop ≤ 1366px */
 @media (max-width: 1366px) {
 	.hero-title { font-size: 4.5rem; }
