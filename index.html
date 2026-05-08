@@ -117,7 +117,6 @@
 </section>
 
 <section id="contato" class="contact">
-	<div class="contact-particles" id="contactParticles"></div>
 	<div class="contact-content">
 		<h2>Entre em contato</h2>
 		<div class="contact-layout">
@@ -224,20 +223,6 @@ function initNeural(canvasId, nodeCount, light) {
 }
 
 initNeural('neural', 100);
-
-// Contact floating particles
-(function() {
-	const container = document.getElementById('contactParticles');
-	for (let i = 0; i < 30; i++) {
-		const p = document.createElement('div');
-		p.className = 'particle';
-		p.style.left = Math.random() * 100 + '%';
-		p.style.animationDuration = (6 + Math.random() * 8) + 's';
-		p.style.animationDelay = (Math.random() * 10) + 's';
-		p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
-		container.appendChild(p);
-	}
-})();
 </script>
 </body>
 </html>
